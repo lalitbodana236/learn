@@ -16,7 +16,7 @@ public class BellmanFordAlgorithm {
 				int src=edges[j][0];
 				int dest=edges[j][1];
 				int weight=edges[j][2];
-
+//commited
 				if(dist[src]!=Integer.MAX_VALUE && dist[src]+weight<dist[dest]) {
 					dist[dest] = dist[src] + weight;
 				}
