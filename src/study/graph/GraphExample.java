@@ -1,8 +1,26 @@
 package study.graph;
 
+import java.util.ArrayList;
+
 public class GraphExample {
     public static void main(String[] args) {
-        int vertices = 5;
+    	
+    	int n=6;
+    	ArrayList< ArrayList<Integer>> adjacencyList = new ArrayList();
+		 
+		 for (int i = 0; i < n; i++) {
+		        adjacencyList.add(new ArrayList<>());
+		    }
+		 int[][] edges = {{}};
+		    for (int[] edge : edges) {
+		        int u = edge[0];
+		        int v = edge[1];
+		        adjacencyList.get(u).add(v);
+		        adjacencyList.get(v).add(u); // Assuming it's an undirected graph
+		    }
+    	
+    	
+        int vertices = 6;
 
         // Create an unweighted, undirected graph
         Graph graph = new Graph(vertices);

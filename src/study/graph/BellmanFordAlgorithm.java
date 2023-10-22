@@ -3,8 +3,9 @@ package study.graph;
 import java.util.Arrays;
 
 public class BellmanFordAlgorithm {
-
 	public int isNegativeWeightCycle(int n,int[][] edges) {
+		
+	
 		int[] dist = new int[n];
 
 		Arrays.fill(dist, Integer.MAX_VALUE);
@@ -16,7 +17,6 @@ public class BellmanFordAlgorithm {
 				int src=edges[j][0];
 				int dest=edges[j][1];
 				int weight=edges[j][2];
-//commited
 				if(dist[src]!=Integer.MAX_VALUE && dist[src]+weight<dist[dest]) {
 					dist[dest] = dist[src] + weight;
 				}
@@ -36,3 +36,5 @@ public class BellmanFordAlgorithm {
 		return 0;
 	}
 }
+
+

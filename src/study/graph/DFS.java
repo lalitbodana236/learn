@@ -7,7 +7,6 @@ public class DFS {
 	public ArrayList<Integer> dfsOfGraph(int V,ArrayList<ArrayList<Integer>> adj){
 		boolean vis[] = new boolean[V];
 		ArrayList<Integer> ans = new ArrayList<>();
-		
 		for(int i=0;i<V;i++) {
 			if(!vis[i]) {
 				//dfs(adj,i,stack,vis);
