@@ -18,4 +18,15 @@ public class DiameterOfBinaryTree {
 
 		return 1+ Math.max(height(root.left), height(root.right));
 	}
+	
+	int ans=0;
+	public int heightDiameter(Node root) {
+		if(root==null) return 0;
+		
+		int lh = heightDiameter(root.left);
+		int rh = heightDiameter(root.right);
+		
+		ans = Math.max(ans,1+lh+rh);
+		return 1+Math.max(lh, rh);
+	}
 }

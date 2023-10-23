@@ -2,6 +2,8 @@ package study.tree;
 
 public class Node {
 	
+	int data;
+	
 	Node left;
 	Node right;
 	
@@ -9,7 +11,7 @@ public class Node {
 		super();
 		this.data = data;
 	}
-	int data;
+	
 	
 	
 }
