@@ -9,7 +9,6 @@ public class FindMedian {
 	public FindMedian() {
 		maxHeap = new PriorityQueue<>((a,b)->b-a);
 		minHeap = new PriorityQueue<>((a,b)->a-b);
-
 	}
 
 	public void insertNum(int num) {
