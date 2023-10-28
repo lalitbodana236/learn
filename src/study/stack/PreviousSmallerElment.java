@@ -27,4 +27,6 @@ public class PreviousSmallerElment {
 				s.push(a[i]);
 			}
 		}
+		
+		
 }

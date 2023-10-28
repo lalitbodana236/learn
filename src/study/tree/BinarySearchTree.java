@@ -150,4 +150,23 @@ public class BinarySearchTree {
 		
 		return util(root.right,sum,set);
 	}
+	
+	 public Node sortedArrayToBST(int[] nums) {
+	        return createBinaryTree(nums, 0, nums.length - 1);
+	    }
+
+	    private Node createBinaryTree(int nums[], int l, int r) {
+	        if (l > r) { 
+	            return null;
+	        }
+
+	        int mid = l + (r - l) / 2; 
+	        Node root = new Node(nums[mid]); 
+
+	        root.left = createBinaryTree(nums, l, mid - 1); 
+	                                                 
+	        root.right = createBinaryTree(nums, mid + 1, r); 
+
+	        return root;
+	    }
 }
