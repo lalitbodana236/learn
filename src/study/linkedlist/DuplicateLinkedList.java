@@ -1,7 +1,8 @@
 package study.linkedlist;
 
 public class DuplicateLinkedList {
-	LNode duplicate(LNode head) {
+	
+	void duplicate(LNode head) {
 		LNode cur = head;
 		while(cur!=null) {
 			LNode temp = cur.next;
@@ -26,8 +27,8 @@ public class DuplicateLinkedList {
 				org= org.next;
 				copy=copy.next;
 			}
-			return temp;
+			//return temp;
 		}
-		return cur;
+		//return cur;
 	}
 }

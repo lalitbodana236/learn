@@ -7,8 +7,9 @@ public class PreviousSmallerElment {
 			StackUsingLinkedList sl = new StackUsingLinkedList();
 			
 			int[] arr = {4,10,5,18,3,12,7};
+			int[] arr1 = {3,10,5,1,15,10,7,6};
 			
-			previousSmallerElement(arr);
+			nextSmaller(arr1);
 		}
 		
 		static void previousSmallerElement(int a[]) {
@@ -26,6 +27,38 @@ public class PreviousSmallerElment {
 				
 				s.push(a[i]);
 			}
+		}
+		
+		static void prevSmaller(int a[]) {
+			for (int i = 0; i < a.length; i++) {
+		        boolean found = false;
+		        for (int j = i - 1; j >= 0; j--) {
+		            if (a[i] >= a[j]) {
+		                System.out.print(a[j] + " ");
+		                found = true;
+		                break;
+		            }
+		        }
+		        if (!found) {
+		            System.out.print(-1 + " "); // No previous smaller element found.
+		        }
+		    }
+		}
+		
+		static void nextSmaller(int a[]) {
+		    for (int i = 0; i<a.length; i++) {
+		        boolean found = false;
+		        for (int j = i + 1; j < a.length; j++) {
+		            if (a[i] >= a[j]) {
+		                System.out.print(a[j] + " ");
+		                found = true;
+		                break;
+		            }
+		        }
+		        if (!found) {
+		            System.out.print(-1 + " "); // No next smaller element found.
+		        }
+		    }
 		}
 		
 		
