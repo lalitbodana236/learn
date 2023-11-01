@@ -2,10 +2,10 @@ package study.tree;
 
 public class Node {
 	
-	int data;
+	public int data;
 	
-	Node left;
-	Node right;
+	public Node left;
+	public Node right;
 	
 	public Node(int data) {
 		super();
