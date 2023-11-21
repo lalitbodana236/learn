@@ -14,7 +14,8 @@ public class CanConstruct {
 	}
 	
 	public static boolean canConstructOptimised(String ransomNote, String magazine) {
-		if (ransomNote.length() > magazine.length()) return false;
+		if (ransomNote.length() > magazine.length()) 
+				return false;
         int[] alphabets_counter = new int[26];
         
         for (char c : magazine.toCharArray())
@@ -59,5 +60,39 @@ public class CanConstruct {
 		
 		return true;
 	}
+	
+	public boolean isIsomorphic(String s, String t) {
+        if (s.length() != t.length()) {
+            return false;
+        }
+
+        Map<Character, Character> mapST = new HashMap<>();
+        Map<Character, Character> mapTS = new HashMap<>();
+
+        for (int i = 0; i < s.length(); i++) {
+            char charS = s.charAt(i);
+            char charT = t.charAt(i);
+
+            // Check if the mapping between s and t exists
+            if (mapST.containsKey(charS)) {
+                if (mapST.get(charS) != charT) {
+                    return false;
+                }
+            } else {
+                mapST.put(charS, charT);
+            }
+
+            // Check if the mapping between t and s exists
+            if (mapTS.containsKey(charT)) {
+                if (mapTS.get(charT) != charS) {
+                    return false;
+                }
+            } else {
+                mapTS.put(charT, charS);
+            }
+        }
+
+        return true;
+    }
 
 }
