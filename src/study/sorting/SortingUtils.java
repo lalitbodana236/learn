@@ -2,7 +2,7 @@ package study.sorting;
 
 public class SortingUtils {
 
-	static void println(int[] a) {
+	public static void println(int[] a) {
 		
 		for(int i : a)
 			System.out.print(i+" ");
