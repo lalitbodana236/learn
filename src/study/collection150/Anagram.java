@@ -45,33 +45,6 @@ public class Anagram {
        return true;   
    }
 
-	/*public static boolean isAnagram(String s, String t) {
-		Map<Character,Character> sMap = new HashMap();
-		Map<Character,Character> tMap = new HashMap();
-		for(int i=0;i<s.length();i++) {
-			Character char1 = s.charAt(i);
-			Character char2 = t.charAt(i);
-
-			if(sMap.containsKey(char1)) {
-				if (!sMap.get(char1).equals(char2)) {
-					return false;
-				}
-			}else {
-				sMap.put(char1, char2);
-			}
-
-			if(tMap.containsKey(char2)) {
-				if (!tMap.get(char2).equals(char1)) {
-					return false;
-				}
-			}else {
-				tMap.put(char2, char1);
-			}
-
-
-		}
-
-		return true;
-	}*/
+	
 
 }
