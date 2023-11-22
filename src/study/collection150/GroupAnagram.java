@@ -34,7 +34,6 @@ public class GroupAnagram {
 
             map.get(sorted).add(str);
         }
-System.out.println(map);
         return new ArrayList<>(map.values());
     }
 
