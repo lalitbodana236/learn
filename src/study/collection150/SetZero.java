@@ -6,5 +6,9 @@ public class SetZero {
 		// TODO Auto-generated method stub
 
 	}
+	
+	public static void setZeros(int matrix[][]) {
+       
+    }
 
 }
